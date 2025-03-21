@@ -6,6 +6,12 @@ function refactorDisplayCards(){
 
 }
 
+function filterArrayEmployes(){
+
+    filteredEmployees = Array.from(employees).filter(employee => employee.style.display === "flex");
+
+}
+
 search_input.addEventListener('keyup', event =>{
 
     employees.forEach(element => {
@@ -19,12 +25,7 @@ search_input.addEventListener('keyup', event =>{
 
             element.style.display = "none";
 
-        }else{
-
-            filteredEmployees.push(element);
-
         }
-        
         
         if(emptyInput){
 
@@ -32,7 +33,7 @@ search_input.addEventListener('keyup', event =>{
 
         }
         
-
+        filterArrayEmployes();
 
     });
 
