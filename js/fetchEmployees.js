@@ -1,6 +1,6 @@
 const apiLink = 'https://randomuser.me/api/?results=12';
 let employees;
-let filteredEmployees;
+let filteredEmployees = [];
 
 async function fetchEmployees(url){
 
@@ -95,9 +95,11 @@ function generateHTML(arrayEmployees){
 
 async function executeFetch(){
 
-    fetchEmployees(apiLink)
-        .then(generateHTML)
-        .then(employees = document.querySelectorAll(".card"))
+    const dataEmployees = await fetchEmployees(apiLink);
+
+    await generateHTML(dataEmployees);
+
+    employees = document.querySelectorAll(".card");
 
 }
 
