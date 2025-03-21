@@ -35,7 +35,7 @@ function generateHTML(arrayEmployees){
         const postalCodeText = element.location.postcode;
         const countryText = element.location.country;
         const streetNameText = element.location.street.name;
-        const civicNumberText = element.location.street.snumber;
+        const civicNumberText = element.location.street.number;
         
         //CARD
         const card = document.createElement("div");
@@ -101,6 +101,7 @@ async function executeFetch(){
 
     employees = document.querySelectorAll(".card");
 
+    filteredEmployees = document.querySelectorAll(".card");
 }
 
 executeFetch();
