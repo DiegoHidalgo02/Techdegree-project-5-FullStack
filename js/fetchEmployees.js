@@ -1,4 +1,4 @@
-const apiLink = 'https://randomuser.me/api/?results=12';
+const apiLink = 'https://randomuser.me/api/?results=12&nat=us';
 let employees;
 let filteredEmployees = [];
 
@@ -48,6 +48,7 @@ function generateHTML(arrayEmployees){
         card.dataset.birthday = birthdayText;
         card.dataset.number = numeberText;
         card.dataset.position = `${civicNumberText} ${streetNameText}., ${cityText} ${countryText} ${postalCodeText}`;
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         //IMAGE
         const card_img_container = document.createElement("div");
@@ -97,11 +98,9 @@ async function executeFetch(){
 
     const dataEmployees = await fetchEmployees(apiLink);
 
-    await generateHTML(dataEmployees);
+    generateHTML(dataEmployees);
 
-    employees = document.querySelectorAll(".card");
-
-    filteredEmployees = document.querySelectorAll(".card");
+    employees = filteredEmployees = document.querySelectorAll(".card");
 }
 
 executeFetch();
