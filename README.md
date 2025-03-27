@@ -12,12 +12,13 @@ body {
     font-style: normal;
 
     text-align: center;
-    background-color: #292727;
+    background-color: #021526;
+    color: #E2E2B6;
 }
 
 header h1 {
     font-size: 1.25em;
-    color: #F0F0F5; /*new color*/
+    color: #E2E2B6; /*new color*/
     margin-top: 35px;
 }
 
@@ -32,9 +33,9 @@ header h1 {
     max-width: 360px;
     margin: 10px 10px 20px;
     padding: 10px;
-    background: #1f1f29; /*new background*/
+    background: #03346E; /*new background*/
     border-radius: 0.25em;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid #E2E2B6;
     transition: .4s ease-out;
     overflow: hidden;
 }
